@@ -2,7 +2,7 @@ version:  "3"
 services:
   db:
     image:  mariadb:10.4
-    comtainer_name: "laravel-db"
+    container_name: "laravel-db"
     volumes:
       - ./data:/var/lib/mysql
       - ./db/my.cnf:/etc/mysql/conf.d/my.cnf
@@ -15,8 +15,8 @@ services:
     ports:
       - "3306:3306"
   php:
-    build:build: ./php
-    comtainer_name:build: "laravel-php"
+    build: ./php
+    container_name: "laravel-php"
     volumes:
       - ./source:/var/www/html
       - ./php/vhost.conf:/etc/apache2/conf-enabled/vhost.conf
