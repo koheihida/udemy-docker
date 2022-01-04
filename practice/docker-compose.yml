@@ -3,6 +3,11 @@ services:
   db:
     image:  mariadb:10.4
     comtainer_name: "laravel-db"
+    volume:
+      ./data:/var/lib/mysql
   php:
     build:build: ./php
     comtainer_name:build: "laravel-php"
+    volume:
+      ./source:/var/www/html
+      
