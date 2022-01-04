@@ -1,4 +1,6 @@
 version:  "3"
 services:
   db:
+    image:  mariadb:10.4
   php:
+    build:build: ./php
