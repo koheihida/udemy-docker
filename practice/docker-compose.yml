@@ -5,6 +5,7 @@ services:
     comtainer_name: "laravel-db"
     volume:
       ./data:/var/lib/mysql
+      ./db/my.cnf:/etc/mysql/conf.d/my.cnf
     ports:
       "3306:3306"
   php:
