@@ -5,9 +5,13 @@ services:
     comtainer_name: "laravel-db"
     volume:
       ./data:/var/lib/mysql
+    ports:
+      "3306:3306"
   php:
     build:build: ./php
     comtainer_name:build: "laravel-php"
     volume:
       ./source:/var/www/html
-      
+    ports:
+      "8080:80"
+
