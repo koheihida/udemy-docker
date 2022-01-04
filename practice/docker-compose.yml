@@ -2,5 +2,7 @@ version:  "3"
 services:
   db:
     image:  mariadb:10.4
+    comtainer_name: "laravel-db"
   php:
     build:build: ./php
+    comtainer_name:build: "laravel-php"
