@@ -12,6 +12,7 @@ services:
     comtainer_name:build: "laravel-php"
     volume:
       ./source:/var/www/html
+      ./php/vhost.conf:/etc/apache2/conf-enabled/vhost.conf
     ports:
       "8080:80"
 
